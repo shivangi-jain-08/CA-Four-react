@@ -1,58 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   padding: 40px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .container {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 50px 50px 15px 50px;
+  padding: 2% 3% 1% 3%;
   transition: background-color 0.3s;
   width: 80%;
   border-radius: 30px;
   background: #7951a1;
+  text-align: center;
 }
 
 .top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10%;
   width: 100%;
   height: 50px;
-  font-size: 30px;
   color: #190321;
 }
 
+h1{
+  font-size: 50px;
+}
+
 .question-number {
-  width: 120px;
-  height: 120px;
-  border-radius: 90px;
-  border: 10px solid #c3b6ea;
-  background: #190321;
-  color: #c3b6ea;
+  color: #190321;
+  background: #d3b6ea;
   text-align: center;
-  font-size: 64px;
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 110px;
-  left: 80px;
+  width: fit-content;
+  padding: 15px;
+  margin: 15px auto;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 5px solid #190321;
 }
 
 .theme-btn {
   background-color: transparent;
   border: none;
-  position: absolute;
-  top: 14px;
-  right: 73px;
 }
 
 .light {
@@ -69,13 +76,14 @@
   color: #fff;
   text-align: center;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 62px;
+  gap: 62px;
   justify-items: center;
   list-style: none;
   padding: 0;
@@ -83,8 +91,8 @@ ul {
 }
 
 li {
-  width: 495px;
-  height: 93px;
+  width: 100%;
+  padding: 15px 0px;
   flex-shrink: 0;
   border-radius: 28px;
   background: #d3b6ea;
@@ -107,6 +115,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   margin: 50px auto 10px auto;
+  width: 100%;
 }
 
 .button-container > button {
@@ -116,10 +125,10 @@ li:hover {
   border: none;
   color: #fff;
   text-align: center;
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 400;
-  width: 300px;
-  height: 65px;
+  width: 35%;
+  padding: 10px 0px;
   flex-shrink: 0;
 }
 
@@ -140,7 +149,7 @@ li:hover {
 }
 
 .progress-bar {
-  width: 500px;
+  width: 50%;
   height: 30px;
   background-color: #190321;
   border-radius: 15px;
@@ -170,7 +179,59 @@ li:hover {
   text-align: center;
   font-size: 32px;
   font-weight: 400;
-  width: 300px;
-  height: 65px;
-  flex-shrink: 0;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .main{
+    height: auto;
+  }
+
+  .container {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2% 2% 0.3% 2%;
+    transition: background-color 0.3s;
+    width: 80%;
+    border-radius: 30px;
+    background: #7951a1;
+    text-align: center;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+  }
+
+  .question {
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  li{
+    font-size: 25px;
+  }
+
+  h1{
+    font-size: 25px;
+  }
+
+  .theme-btn{
+    scale: 0.6; 
+  }
+
+  .button-container>button{
+    font-size: 18px;
+    
+  }
+  
 }

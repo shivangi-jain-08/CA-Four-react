@@ -104,7 +104,7 @@ const QuestionBox = () => {
         {!showResult ? (
           // Display questions and options if the result is not yet shown
           <div>
-            <div className="question-number">{currentQuestion + 1}</div>
+            <div className="question-number">Question: {currentQuestion + 1} of {questions.length}</div>
             <div style={getQuestionStyle()} className="question">
               {/* Display the current question */}
               {questions[currentQuestion].text}
